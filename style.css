@@ -226,11 +226,23 @@ body {
 	margin-top: 50px;
 	margin-bottom: 100px;
     transition: .5s;
+	position: relative;
+	background: #fff;
+}
+.service-section{
+	position: relative;
+	z-index: 1;
+}
+.box-dot {
+	position: absolute;
+	bottom: 53px;
+	left: 48px;
+	z-index: -1;
 }
 .service-box:hover {
 	background-color: #3a4af2;
 	color: white;
-	transform: scale(1.1);
+	transform: scale(1.05);
 }
 .service-box:hover p{
     color: white;
@@ -254,7 +266,6 @@ body {
 	font-size: 24px;
 	border-radius: 50% 50% 50% 0;
 	margin: 17px 0;
-    position: relative;
     transition: .5s;
 }
 .service-box:hover span{
@@ -265,15 +276,19 @@ body {
 	color: #767676;
 	font-size: 14px;
 }
-.service-box span::after {
+.service-box::after {
 	content: "";
 	position: absolute;
-	bottom: -12px;
-	left: 0;
+	bottom: 82px;
+	left: 20px;
 	width: 30px;
 	height: 3px;
 	background: #5252f0;
-    transition: .5s;
+	transition: .5s;
+}
+.service-box:hover::after{
+	width:50px;
+	background-color: white;
 }
 .test{
     padding-left: 0;
@@ -285,11 +300,11 @@ body {
 	background: url(https://i.ibb.co/mXzwXn0/video-bg-Copy.jpg);
 	background-size: cover;
 	background-position: top center;
-	padding: 200px 0;
+	padding: 150px 0;
 	text-align: center;
 	margin-bottom: 60px;
-    position: relative;
-    z-index: 1;
+	position: relative;
+	z-index: 1;
 }
 .female-tex::after {
 	content: "";
@@ -303,7 +318,7 @@ body {
 }
 .female-tex1 {
 	position: relative;
-	top: -120px;
+	top: -83px;
 	left: 115px;
 }
 .female-tex1 h4 {
@@ -316,7 +331,7 @@ body {
 	text-transform: capitalize;
 	color: white;
 	font-size: 40px;
-	padding-bottom: 30px;
+	padding-bottom: 10px;
 }
 .female-tex1 p {
 	color: white;
@@ -324,6 +339,15 @@ body {
 	font-weight: 400;
 	width: 700px;
 	margin: auto;
+}
+.female-tex1::after {
+	content: "";
+	position: absolute;
+	top: 80px;
+	left: 584px;
+	background: white;
+	width: 135px;
+	height: 3px;
 }
 .female-tex1 span {
 	color: #0d6efd;
