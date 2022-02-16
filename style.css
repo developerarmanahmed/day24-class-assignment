@@ -218,12 +218,24 @@ body {
     font-size: 20px;
     width: 780px;
     padding-top: 30px;
+    transition: .5s;
   }
 
   .service-box {
 	padding: 20px;
 	margin-top: 50px;
 	margin-bottom: 100px;
+    transition: .5s;
+}
+.service-box:hover {
+	background-color: #3a4af2;
+	color: white;
+	transform: scale(1.1);
+}
+.service-box:hover p{
+    color: white;
+
+
 }
 .service-box h5 {
 	font-size: 20px;
@@ -243,6 +255,11 @@ body {
 	border-radius: 50% 50% 50% 0;
 	margin: 17px 0;
     position: relative;
+    transition: .5s;
+}
+.service-box:hover span{
+    background-color: white;
+    color:#5252f0;
 }
 .service-box p {
 	color: #767676;
@@ -256,6 +273,7 @@ body {
 	width: 30px;
 	height: 3px;
 	background: #5252f0;
+    transition: .5s;
 }
 .test{
     padding-left: 0;
@@ -270,6 +288,18 @@ body {
 	padding: 200px 0;
 	text-align: center;
 	margin-bottom: 60px;
+    position: relative;
+    z-index: 1;
+}
+.female-tex::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #45506a8a;
+	z-index: -1;
 }
 .female-tex1 {
 	position: relative;
@@ -294,4 +324,67 @@ body {
 	font-weight: 400;
 	width: 700px;
 	margin: auto;
+}
+.female-tex1 span {
+	color: #0d6efd;
+	background: white;
+	height: 80px;
+	width: 80px;
+	display: inline-block;
+	line-height: 80px;
+	border-radius: 50%;
+	font-size: 20px;
+	position: relative;
+	top: 50px;
+	 left: -80px;
+	 transition: .5s;
+	 cursor: pointer;
+
+}
+.female-tex1 span:hover{
+	color: white;
+	background-color: #0d6efd;
+}
+.female-tex1 span::after {
+	content: "";
+	position: absolute;
+	top: 2px;
+	left: 0;
+	width: 90%;
+	border: 1px solid rgb(255, 255, 255);
+	height: 90%;
+	right: 0;
+	margin: auto;
+	border-radius: 50%;
+	bottom: 0;
+	animation: animation 2s ease-in-out infinite;
+}
+.female-tex1 span::before {
+	content: "";
+	position: absolute;
+	top: 2px;
+	left: 0;
+	width: 80%;
+
+	border: 1px solid rgb(255, 255, 255);
+	height: 80%;
+	right: 0;
+	margin: auto;
+	border-radius: 50%;
+	bottom: 0;
+	animation: animation 2s ease-in-out infinite;
+}
+@keyframes animation {
+	0%{
+		transform: scale(1);
+		opacity: 0;
+	}
+	50%{
+		transform: scale(1.5);
+		opacity: 1;
+	}	
+	100%{
+		transform: scale(2);
+		opacity: 0;
+	}	
 }
