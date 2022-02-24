@@ -711,8 +711,10 @@ img{
 .footer-left ul li{
 	list-style: none;
 }
-.footer-left ul li a{display: inline-block;color: white;padding-right: 30px;font-size: 20px;}
-.footer-left ul li a:hover{}
+.footer-left ul li a{display: inline-block;color: white;padding-right: 30px;font-size: 20px; transition: .5s;}
+.footer-left ul li a:hover {
+	color: red;
+}
 
 .footer-menu{
 	margin: 100px 0;
@@ -778,4 +780,32 @@ img{
 	position: absolute;
 	left: 630px;
 	top: 515px;
+}
+.awesome-section{
+	position: relative;
+}
+.awesome-left::after {
+	content: "";
+	position: absolute;
+	top: 250px;
+	left: 120px;
+	background-color: #3763eb;
+	width: 55px;
+	height: 3px;
+}
+.awesome-right img {
+	width: 210px;
+	border: 1px solid #ddd;
+	height: 145px;
+	opacity: .5;
+	transition: .5s;
+}
+.awesome-right img:hover{
+	opacity: 1;
+}
+.awesome-left p {
+	margin: 20px 0;
+}
+.awesome-left h6 {
+	margin-bottom: 15px;
 }
